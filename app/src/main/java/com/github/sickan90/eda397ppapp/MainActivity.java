@@ -32,8 +32,7 @@ public class MainActivity extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
-            //newchange
-            //somethingdifferent
+            //ajkhsdkjasd
         }
 
         return super.onOptionsItemSelected(item);
