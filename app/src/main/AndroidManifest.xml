@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PlanningPoker"
+            android:label="@string/title_activity_plannig_poker"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".PlanningPokerDisplay"
+            android:label="@string/title_activity_planning_poker_display"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

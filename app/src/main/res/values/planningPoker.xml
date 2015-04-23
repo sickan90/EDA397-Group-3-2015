@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="planning_poker_name">Planning poker game</string>
+    <string name="planning1">0</string>
+    <string name="planning2">1</string>
+    <string name="planning3">2</string>
+    <string name="planning4">3</string>
+    <string name="planning5">5</string>
+    <string name="planning6">8</string>
+
+    <string name="planningWinButton">Assign Value</string>
+    <string name="planningLooseButtom">Go Back</string>
+</resources>
