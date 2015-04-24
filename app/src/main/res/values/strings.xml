@@ -3,4 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_plannig_poker">PlannigPoker</string>
+    <string name="planning_poker_game">Planning Poker Game</string>
+    <string name="title_activity_planning_poker_display">PlanningPokerDisplay</string>
 </resources>
