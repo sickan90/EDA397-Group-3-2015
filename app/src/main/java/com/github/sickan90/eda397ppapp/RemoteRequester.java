@@ -40,6 +40,9 @@ public class RemoteRequester {
 
 // Instantiate the RequestQueue with the cache and network.
         requestQueue = new RequestQueue(cache, network);
+
+// Start the queue
+        requestQueue.start();
     }
 
     /**
