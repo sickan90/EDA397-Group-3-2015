@@ -21,5 +21,14 @@
         android:layout_toRightOf="@+id/textView"
         android:layout_toEndOf="@+id/textView" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account info"
+        android:id="@+id/accountDetails"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/testLoginButton"
+        android:layout_alignEnd="@+id/testLoginButton" />
+
 </RelativeLayout>
 

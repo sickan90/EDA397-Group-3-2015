@@ -1,5 +1,6 @@
 package com.github.sickan90.eda397ppapp;
 
+import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -37,6 +38,19 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         final Button btnTestLogin = (Button) findViewById(R.id.testLoginButton);
+        final Button accountDetails = (Button) findViewById(R.id.accountDetails);
+
+        View.OnClickListener accountListener = new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                DialogFragment trackerKeyDialog = new TrackerKeyDialog();
+                trackerKeyDialog.show(getSupportFragmentManager(), "account_details");
+            }
+
+        };
+
+
+
 
         View.OnClickListener clickListener = new View.OnClickListener() {
             @Override
@@ -46,6 +60,7 @@ public class MainActivity extends ActionBarActivity {
         };
 
         btnTestLogin.setOnClickListener(clickListener);
+
 
         RemoteRequester.getInstance().initialize(getCacheDir());
     }
