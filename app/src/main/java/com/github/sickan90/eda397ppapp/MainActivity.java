@@ -1,14 +1,18 @@
 package com.github.sickan90.eda397ppapp;
 
+import android.app.AlertDialog;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Cache;
@@ -32,19 +36,44 @@ import java.util.Map;
 
 public class MainActivity extends ActionBarActivity {
 
+    private final Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         final Button btnTestLogin = (Button) findViewById(R.id.testLoginButton);
-        final Button accountDetails = (Button) findViewById(R.id.accountDetails);
+        final Button btnAccountDetails = (Button) findViewById(R.id.accountDetails);
 
         View.OnClickListener accountListener = new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                DialogFragment trackerKeyDialog = new TrackerKeyDialog();
-                trackerKeyDialog.show(getSupportFragmentManager(), "account_details");
+                LayoutInflater layoutInflater = LayoutInflater.from(context);
+                View promptsView = layoutInflater.inflate(R.layout.tracker_key_dialog_layout, null);
+                // Use the Builder class for convenient dialog construction
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setView(promptsView);
+                // Set an EditText view to get user input
+                final EditText input = (EditText) promptsView.findViewById(R.id.trackerKeyPrompt);
+
+                builder.setCancelable(false).
+                        setPositiveButton("Confirm",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        Log.i("TrackerKeyDialog", "saving key");
+                                    }
+                                })
+                        .setNegativeButton("Cancel",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Log.i("TrackerKeyDialog", "cancel key input");
+                                    }
+                                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
             }
 
         };
@@ -60,6 +89,8 @@ public class MainActivity extends ActionBarActivity {
         };
 
         btnTestLogin.setOnClickListener(clickListener);
+        btnAccountDetails.setOnClickListener(accountListener);
+
 
 
         RemoteRequester.getInstance().initialize(getCacheDir());
