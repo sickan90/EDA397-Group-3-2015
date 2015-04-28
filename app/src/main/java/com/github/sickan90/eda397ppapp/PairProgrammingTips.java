@@ -1,39 +1,29 @@
 package com.github.sickan90.eda397ppapp;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class PairProgrammingTips extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_pair_programming_tips);
 
+        TextView tips = (TextView) findViewById(R.id.pairProgrammingTipsMain);
+        tips.setText("This is a pair programming tip!");
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_pair_programming_tips, menu);
         return true;
-    }
-
-    public void planningGameButton(View view){
-        Intent intent = new Intent(this, PlanningPoker.class);
-        startActivity(intent);
-
-    }
-
-    public void pairProgramingTipsButton(View view) {
-        Intent intent = new Intent(this, PairProgrammingTips.class);
-        startActivity(intent);
     }
 
     @Override
@@ -46,7 +36,6 @@ public class MainActivity extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
-            //ajkhsdkjasd
         }
 
         return super.onOptionsItemSelected(item);

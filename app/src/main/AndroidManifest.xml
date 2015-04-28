@@ -26,6 +26,11 @@
             android:label="@string/title_activity_planning_poker_display"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".PairProgrammingTips"
+            android:label="@string/title_activity_pair_programming_tips"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
