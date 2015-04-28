@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/planning_poker_name"
+        android:text="@string/title_activity_plannig_poker"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -38,20 +38,20 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="@string/planning1"
+                android:text="@string/planning_poker_button_1_text"
                 android:id="@+id/planningPokerButton1"
                 android:layout_weight="1"
                 android:onClick="numberClick"
-                android:textSize="@dimen/planningPokerButtonTextSize" />
+                android:textSize="@dimen/activity_planning_poker_button_text_size" />
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="@string/planning2"
+                android:text="@string/planning_poker_button_2_text"
                 android:id="@+id/planningPokerButton2"
                 android:layout_weight="1"
                 android:onClick="numberClick"
-                android:textSize="@dimen/planningPokerButtonTextSize" />
+                android:textSize="@dimen/activity_planning_poker_button_text_size" />
         </LinearLayout>
 
         <LinearLayout
@@ -62,20 +62,20 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="@string/planning3"
+                android:text="@string/planning_poker_button_3_text"
                 android:id="@+id/planningPokerButton3"
                 android:layout_weight="1"
                 android:onClick="numberClick"
-                android:textSize="@dimen/planningPokerButtonTextSize" />
+                android:textSize="@dimen/activity_planning_poker_button_text_size" />
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="@string/planning4"
+                android:text="@string/planning_poker_button_4_text"
                 android:id="@+id/planningPokerButton4"
                 android:layout_weight="1"
                 android:onClick="numberClick"
-                android:textSize="@dimen/planningPokerButtonTextSize" />
+                android:textSize="@dimen/activity_planning_poker_button_text_size" />
         </LinearLayout>
 
         <LinearLayout
@@ -86,20 +86,20 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="@string/planning5"
+                android:text="@string/planning_poker_button_5_text"
                 android:id="@+id/planningPokerButton5"
                 android:layout_weight="1"
                 android:onClick="numberClick"
-                android:textSize="@dimen/planningPokerButtonTextSize" />
+                android:textSize="@dimen/activity_planning_poker_button_text_size" />
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="@string/planning6"
+                android:text="@string/planning_poker_button_6_text"
                 android:id="@+id/planningPokerButton6"
                 android:layout_weight="1"
                 android:onClick="numberClick"
-                android:textSize="@dimen/planningPokerButtonTextSize" />
+                android:textSize="@dimen/activity_planning_poker_button_text_size" />
         </LinearLayout>
 
     </LinearLayout>

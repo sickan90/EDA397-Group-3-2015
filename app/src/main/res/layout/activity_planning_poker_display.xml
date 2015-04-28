@@ -22,7 +22,7 @@
             android:id="@+id/planningPokerDisplayTextView"
             android:layout_weight="0.9"
             android:gravity="center"
-            android:textSize="@dimen/planningPokerShowTextSize" />
+            android:textSize="@dimen/activity_planning_poker_display_text_size" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -34,7 +34,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/planningLooseButtom"
+                android:text="@string/planning_poker_lose_button"
                 android:id="@+id/planningPokerDisplayBackButton"
                 android:layout_weight="0.5"
                 android:onClick="backButtonClick" />
@@ -43,7 +43,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/planningWinButton"
+                android:text="@string/planning_poker_win_button"
                 android:id="@+id/planningPokerDisplayWinButton"
                 android:layout_weight="0.5"
                 android:onClick="winButtonClick" />

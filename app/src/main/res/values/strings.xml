@@ -1,9 +1,25 @@
 <resources>
     <string name="app_name">EDA397 PP app</string>
 
-    <string name="hello_world">Hello world!</string>
+    <!-- Manu Item Names -->
     <string name="action_settings">Settings</string>
-    <string name="title_activity_plannig_poker">PlannigPoker</string>
-    <string name="planning_poker_game">Planning Poker Game</string>
-    <string name="title_activity_planning_poker_display">PlanningPokerDisplay</string>
+
+    <!-- Main Activity Strings -->
+    <string name="title_activity_main_activity">Main Menu</string>
+
+    <!-- Planning Poker Activity Strings -->
+    <string name="title_activity_plannig_poker">Planning Poker</string>
+    <string name="title_activity_planning_poker_display">Planning Poker Display</string>
+
+    <string name="planning_poker_button_1_text">0</string>
+    <string name="planning_poker_button_2_text">1</string>
+    <string name="planning_poker_button_3_text">2</string>
+    <string name="planning_poker_button_4_text">3</string>
+    <string name="planning_poker_button_5_text">5</string>
+    <string name="planning_poker_button_6_text">8</string>
+
+    <string name="planning_poker_win_button">Assign Value</string>
+    <string name="planning_poker_lose_button">Go Back</string>
+
+
 </resources>
