@@ -84,7 +84,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 HashMap<String, String> params = new HashMap<String, String>();
-                params.put("X-TrackerToken", "insertyourtokenhere");
+                params.put("X-TrackerToken", "f35dec9692a27d0b77ce8379da26f9f0");
 
                 return params;
             }

@@ -22,5 +22,5 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.0.0'
-    compile project(':volley')
+    compile files('C:/Users/Markus/Repositories/EDA397-Group-3-2015/libs/volley.jar')
 }
