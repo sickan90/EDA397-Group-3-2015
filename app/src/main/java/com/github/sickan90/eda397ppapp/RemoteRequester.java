@@ -10,5 +10,4 @@ public class RemoteRequester {
     private RemoteRequester() {
     }
 
-    public void sendJsonRequest(String url, )
 }
