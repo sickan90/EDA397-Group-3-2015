@@ -29,6 +29,9 @@
     <string name="planning_poker_win_button">Assign Value</string>
     <string name="planning_poker_lose_button">Go Back</string>
 
+    <!-- Pair Programming Tips Strings -->
+    <string name="title_activity_pair_programming_tips">Pair Programming Tips</string>
+
 
 >>>>>>> master
 </resources>

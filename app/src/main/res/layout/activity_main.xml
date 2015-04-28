@@ -92,11 +92,12 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="something"
-                android:id="@+id/somethingButton5"
+				android:text="@string/title_activity_pair_programming_tips"
+                android:id="@+id/pairProgrammingTipsButton"
                 android:layout_weight="1"
-                android:onClick=""
-                android:textSize="@dimen/activity_main_button_text_size" />
+                android:onClick="pairProgramingTipsButton"
+                android:textSize="@dimen/activity_main_button_text_size"
+                android:nestedScrollingEnabled="false" />
         </LinearLayout>
 
     </LinearLayout>
