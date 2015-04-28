@@ -30,6 +30,9 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -62,6 +65,19 @@ public class MainActivity extends ActionBarActivity {
                                     @Override
                                     public void onClick(DialogInterface dialog, int id) {
                                         Log.i("TrackerKeyDialog", "saving key");
+                                        String keyFile = "trackerKeyData";
+                                        try {
+                                            FileOutputStream fileOutputStream = openFileOutput(
+                                                    keyFile, Context.MODE_PRIVATE);
+                                            fileOutputStream.write(input.getText().toString().getBytes());
+                                            fileOutputStream.close();
+
+                                            
+                                        } catch (FileNotFoundException e) {
+                                            Log.e("file_error", "Key file not found");
+                                        } catch (IOException e) {
+                                            Log.e("io_error", "Io exception");
+                                        }
                                     }
                                 })
                         .setNegativeButton("Cancel",

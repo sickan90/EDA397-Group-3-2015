@@ -15,19 +15,5 @@ android:layout_height="wrap_content">
     android:layout_marginBottom="4dp"
     android:hint="@string/tracker_key" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="confirm"
-        android:id="@+id/confirmButton" />
-
 </LinearLayout>
 
