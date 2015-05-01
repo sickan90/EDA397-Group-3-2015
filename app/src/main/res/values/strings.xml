@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">EDA397 PP app</string>
+    <string name="hello_world">Hello world!</string>
 
     <!-- Menu Item Names -->
     <string name="action_settings">Settings</string>
@@ -29,6 +30,7 @@
     <string name="planning_poker_win_button">Assign Value</string>
     <string name="planning_poker_lose_button">Go Back</string>
 
+<<<<<<< HEAD
     <!-- Pair Programming Tips Strings -->
     <string name="title_activity_pair_programming_tips">Pair Programming Tips</string>
     <string name="title_activity_pair_programming_tips_display">Pair Programming Tips Display</string>
@@ -53,5 +55,9 @@
     <string name="story_priority_text">Priority: </string>
     <string name="story_estimate_text">Estimate: </string>
     <string name="story_status_text">Status: </string>
+
+    <!-- Timer Activity Strings -->
+    <string name="title_activity_timer">Pair Programming Timer</string>
+    <string name="timer_on_off_switch_text">Set timer on/off</string>
 
 </resources>

@@ -68,10 +68,10 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="something"
-                android:id="@+id/somethingButton3"
+                android:text="@string/title_activity_timer"
+                android:id="@+id/mainActivityTimerButton"
                 android:layout_weight="1"
-                android:onClick=""
+                android:onClick="timerButton"
                 android:textSize="@dimen/activity_main_button_text_size" />
         </LinearLayout>
 

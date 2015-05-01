@@ -49,6 +49,10 @@
             android:name=".ViewIndividualStory"
             android:label="@string/title_activity_view_individual_story" >
         </activity>
+        <activity
+            android:name=".TimerActivity"
+            android:label="@string/title_activity_timer" >
+        </activity>
     </application>
 
 </manifest>

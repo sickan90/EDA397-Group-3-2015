@@ -16,4 +16,8 @@
     <!-- View Individual Story Dimension Settings -->
     <dimen name="activity_view_individual_story_text_size">24sp</dimen>
 
+    <!-- Timer Dimension Settings -->
+    <dimen name="activity_timer_settings_margin">4dp</dimen>
+    <dimen name="activity_timer_settings_text_size">18sp</dimen>
+
 </resources>
