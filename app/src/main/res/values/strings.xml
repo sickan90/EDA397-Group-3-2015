@@ -31,6 +31,10 @@
 
     <!-- Pair Programming Tips Strings -->
     <string name="title_activity_pair_programming_tips">Pair Programming Tips</string>
+    <string name="title_activity_pair_programming_tips_display">Pair Programming Tips Display</string>
+
+    <string name="pair_programming_tips_text">This is a pair programming tip!</string>
+
 
 
 >>>>>>> master
