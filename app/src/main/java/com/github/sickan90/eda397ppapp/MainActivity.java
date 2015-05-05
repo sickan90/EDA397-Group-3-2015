@@ -1,9 +1,9 @@
 package com.github.sickan90.eda397ppapp;
 
 import android.app.AlertDialog;
-import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -11,28 +11,16 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.android.volley.AuthFailureError;
-import com.android.volley.Cache;
-import com.android.volley.Network;
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.BasicNetwork;
-import com.android.volley.toolbox.DiskBasedCache;
-import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
 
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,10 +28,13 @@ import java.util.Map;
 public class MainActivity extends ActionBarActivity {
 
     private final Context context = this;
+    private final static String PREFERENCES = "PREFERENCES";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         final Button btnTestLogin = (Button) findViewById(R.id.testLoginButton);
         final Button btnAccountDetails = (Button) findViewById(R.id.accountDetails);
@@ -64,20 +55,20 @@ public class MainActivity extends ActionBarActivity {
                                 new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int id) {
-                                        Log.i("TrackerKeyDialog", "saving key");
-                                        String keyFile = "trackerKeyData";
-                                        try {
-                                            FileOutputStream fileOutputStream = openFileOutput(
-                                                    keyFile, Context.MODE_PRIVATE);
-                                            fileOutputStream.write(input.getText().toString().getBytes());
-                                            fileOutputStream.close();
+                                        // We need an Editor object to make preference changes.
+                                        // All objects are from android.context.Context
+                                        SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
+                                        SharedPreferences.Editor editor = settings.edit();
+                                        editor.putString("trackerKey", input.getText().toString());
 
-                                            
-                                        } catch (FileNotFoundException e) {
-                                            Log.e("file_error", "Key file not found");
-                                        } catch (IOException e) {
-                                            Log.e("io_error", "Io exception");
-                                        }
+                                        // Commit the edits!
+                                        editor.commit();
+
+
+                                        String trackerKey = settings.getString("trackerKey", "");
+
+                                        Log.i("Key saved", trackerKey);
+
                                     }
                                 })
                         .setNegativeButton("Cancel",
@@ -120,7 +111,6 @@ public class MainActivity extends ActionBarActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.i("EDA397", "flajsdflk");
                         Log.i("EDA397", response);
                     }
                 },
@@ -133,7 +123,9 @@ public class MainActivity extends ActionBarActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 HashMap<String, String> params = new HashMap<String, String>();
-                params.put("X-TrackerToken", "f35dec9692a27d0b77ce8379da26f9f0");
+                SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
+                String trackerKey = settings.getString("trackerKey", "");
+                params.put("X-TrackerToken", trackerKey);
 
                 return params;
             }
