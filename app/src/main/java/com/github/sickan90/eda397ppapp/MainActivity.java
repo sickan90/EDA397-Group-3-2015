@@ -14,12 +14,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -95,10 +100,26 @@ public class MainActivity extends ActionBarActivity {
     public void getStoriesButton(View view) {
         SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
         String trackerKey = settings.getString("trackerKey", "");
-        String url ="https://www.pivotaltracker.com/accounts/{756790}?X-TrackerToken=" + trackerKey;
-                //"https://www.pivotaltracker.com/services/v5/projects/1310422/stories";
+        String url = "https://www.pivotaltracker.com/services/v5/projects/1310422/stories";
 
         // Formulate the request and handle the response.
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null,
+                new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.i("Response", response.toString());
+                    }
+                }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d("Error", "Error: " + error.getMessage());
+                Toast.makeText(getApplicationContext(),
+                        error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
@@ -126,7 +147,7 @@ public class MainActivity extends ActionBarActivity {
         };
 
         // Add the request to the RequestQueue.
-        RemoteRequester.getInstance().addRequest(stringRequest);
+        RemoteRequester.getInstance().addRequest(jsonObjectRequest);
     }
 
     @Override
