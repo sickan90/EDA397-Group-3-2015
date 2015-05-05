@@ -24,6 +24,7 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -100,7 +101,13 @@ public class MainActivity extends ActionBarActivity {
     public void getStoriesButton(View view) {
         SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
         String trackerKey = settings.getString("trackerKey", "");
-        String url = "https://www.pivotaltracker.com/services/v5/projects/1310422/stories";
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("X-TrackerToken", trackerKey);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        String url = "https://www.pivotaltracker.com/services/v5/projects/1310422";
 
         // Formulate the request and handle the response.
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null,
@@ -109,6 +116,11 @@ public class MainActivity extends ActionBarActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.i("Response", response.toString());
+                        try {
+                            Log.i("Response", response.getString("name"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }, new Response.ErrorListener() {
 
