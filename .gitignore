@@ -33,9 +33,5 @@ proguard/
 /.idea/workspace.xml
 /.idea/libraries
 
-<<<<<<< HEAD
-
-=======
 # .iml
 *.iml
->>>>>>> master
