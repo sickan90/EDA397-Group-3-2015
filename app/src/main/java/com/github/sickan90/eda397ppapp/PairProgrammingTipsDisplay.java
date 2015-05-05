@@ -16,6 +16,8 @@ public class PairProgrammingTipsDisplay extends ActionBarActivity {
 
         String headline = getIntent().getStringExtra("TIP");
 
+        // This could be refactored, we could either use a database (to get rid of the if-statements)
+        // or just read from a text file to get rid of the text in the code.
         if (headline.equals("Define the task"))
             ((TextView) findViewById(R.id.pairProgrammingDisplayTextView)).setText("Task should be " +
                     "well defined for each person in the team. Also it is important that each " +
