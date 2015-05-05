@@ -132,32 +132,6 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Log.i("EDA397", response);
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // Handle error
-                    }
-                }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                HashMap<String, String> params = new HashMap<String, String>();
-                SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
-                String trackerKey = settings.getString("trackerKey", "");
-                Log.i("Key entered", "Key Entered: " + trackerKey);
-                Log.i("fjdskjf", "jfdjksdf");
-                params.put("X-TrackerToken", trackerKey);
-
-                return params;
-            }
-        };
-
         // Add the request to the RequestQueue.
         RemoteRequester.getInstance().addRequest(jsonObjectRequest);
     }
