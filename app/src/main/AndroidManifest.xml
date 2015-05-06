@@ -19,12 +19,21 @@
         <activity
             android:name=".PlanningPoker"
             android:label="@string/title_activity_plannig_poker"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".PlanningPokerDisplay"
             android:label="@string/title_activity_planning_poker_display"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PairProgrammingTips"
+            android:label="@string/title_activity_pair_programming_tips"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PairProgrammingTipsDisplay"
+            android:label="@string/title_activity_pair_programming_tips_display" >
         </activity>
     </application>
 

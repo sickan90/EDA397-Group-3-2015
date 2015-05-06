@@ -31,6 +31,11 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    public void pairProgramingTipsButton(View view) {
+        Intent intent = new Intent(this, PairProgrammingTips.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
