@@ -137,12 +137,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void addStoriesButton(View view) {
-        SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
-        String trackerKey = settings.getString("trackerKey", "");
 
         String requestURL = "https://www.pivotaltracker.com/services/v5/projects/1310422/stories";
         Map<String, String> postParams = new HashMap<String, String>();
-        postParams.put("name", "new_Story_from_Android");
+        postParams.put("name", "new_Story");
 
 
         // Formulate the request and handle the response.
