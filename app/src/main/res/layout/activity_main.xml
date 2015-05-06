@@ -44,10 +44,10 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="something"
-                android:id="@+id/somethingButton1"
+                android:text="ADD STORIES"
+                android:id="@+id/getStoriesButton"
                 android:layout_weight="1"
-                android:onClick=""
+                android:onClick="addStoriesButton"
                 android:textSize="@dimen/activity_main_button_text_size" />
         </LinearLayout>
 
@@ -84,7 +84,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:text="GET STORIES"
-                android:id="@+id/getStoriesButton"
+                android:id="@+id/addStoriesButton"
                 android:layout_weight="1"
                 android:onClick="getStoriesButton"
                 android:textSize="@dimen/activity_main_button_text_size" />

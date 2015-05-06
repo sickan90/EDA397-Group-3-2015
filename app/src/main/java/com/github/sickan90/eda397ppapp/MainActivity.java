@@ -136,7 +136,57 @@ public class MainActivity extends ActionBarActivity {
         RemoteRequester.getInstance().addRequest(jsonObjectRequest);
     }
 
-    @Override
+    public void addStoriesButton(View view) {
+        SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
+        String trackerKey = settings.getString("trackerKey", "");
+
+        String requestURL = "https://www.pivotaltracker.com/services/v5/projects/1310422/stories";
+        Map<String, String> postParams = new HashMap<String, String>();
+        postParams.put("name", "new_Story_from_Android");
+
+
+        // Formulate the request and handle the response.
+        JsonObjectRequest jsonObjectRequest =
+                new JsonObjectRequest(
+                        Request.Method.POST,
+                        requestURL,
+                        new JSONObject(postParams),
+                        new Response.Listener<JSONObject>() {
+
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                Log.i("Response", response.toString());
+                                try {
+                                    Log.i("Response", response.getString("name"));
+                                    if (response.getInt("id") != 0)
+                                        Log.i("Response ID", "Success!");
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                VolleyLog.d("Error", "Error: " + error.getMessage());
+                                Toast.makeText(getApplicationContext(),
+                                        error.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }) {
+                    public Map<String, String> getHeaders() throws AuthFailureError {
+                        HashMap<String, String> headers = new HashMap<String, String>();
+                        headers.put("Content-Type", "application/json");
+                        headers.put("X-Tracker-Project-Version", "63");
+                        headers.put("X-TrackerToken", "96f5f045c13ba69258837951f1910e73");
+                        return headers;
+                    }
+                };
+
+        RemoteRequester.getInstance().addRequest(jsonObjectRequest);
+    }
+
+
+        @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
