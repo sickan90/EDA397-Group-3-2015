@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">EDA397 PP app</string>
 
-    <!-- Manu Item Names -->
+    <!-- Menu Item Names -->
     <string name="action_settings">Settings</string>
+
+    <!-- Account Information Prompts -->
+    <string name="tracker_key">Enter Pivotal Tracker key</string>
 
     <!-- Main Activity Strings -->
     <string name="title_activity_main_activity">Main Menu</string>
@@ -22,4 +25,5 @@
     <string name="planning_poker_lose_button">Go Back</string>
 
 
+>>>>>>> master
 </resources>

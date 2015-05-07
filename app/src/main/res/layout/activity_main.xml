@@ -4,7 +4,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,10 +44,10 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="something"
-                android:id="@+id/somethingButton1"
+                android:text="ADD STORIES"
+                android:id="@+id/getStoriesButton"
                 android:layout_weight="1"
-                android:onClick=""
+                android:onClick="addStoriesButton"
                 android:textSize="@dimen/activity_main_button_text_size" />
         </LinearLayout>
 
@@ -60,10 +59,10 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="something"
-                android:id="@+id/somethingButton2"
+                android:text="TRACKER KEY"
+                android:id="@+id/trackerKeyButton"
                 android:layout_weight="1"
-                android:onClick=""
+                android:onClick="trackerKeyButton"
                 android:textSize="@dimen/activity_main_button_text_size" />
 
             <Button
@@ -84,10 +83,10 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="something"
-                android:id="@+id/somethingButton4"
+                android:text="GET STORIES"
+                android:id="@+id/addStoriesButton"
                 android:layout_weight="1"
-                android:onClick=""
+                android:onClick="getStoriesButton"
                 android:textSize="@dimen/activity_main_button_text_size" />
 
             <Button
@@ -103,3 +102,4 @@
     </LinearLayout>
 
 </RelativeLayout>
+
