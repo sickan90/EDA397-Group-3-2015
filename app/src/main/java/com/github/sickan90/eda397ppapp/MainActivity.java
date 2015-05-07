@@ -189,8 +189,12 @@ public class MainActivity extends ActionBarActivity {
         RemoteRequester.getInstance().addRequest(jsonObjectRequest);
     }
 
+    public void pairProgramingTipsButton(View view) {
+        Intent intent = new Intent(this, PairProgrammingTips.class);
+        startActivity(intent);
+    }
 
-        @Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long

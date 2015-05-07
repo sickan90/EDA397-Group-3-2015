@@ -4,10 +4,13 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <!-- Main Menu Dimension Settings -->
-    <dimen name="activity_main_button_text_size">24sp</dimen>
+    <dimen name="activity_main_button_text_size">18sp</dimen>
 
     <!-- Planning Poker Dimension Settings -->
     <dimen name="activity_planning_poker_button_text_size">96sp</dimen>
     <dimen name="activity_planning_poker_display_text_size">254sp</dimen>
+
+    <!-- Pair Programming Dimension Settings -->
+    <dimen name="activity_pair_programming_tip_text_size">24sp</dimen>
 
 </resources>
