@@ -7,6 +7,11 @@
     <!-- Account Information Prompts -->
     <string name="tracker_key">Enter Pivotal Tracker key</string>
 
+    <!-- Pivotal Tracker Connections -->
+    <string name="title_button_get_stories">Get Stories</string>
+    <string name="title_button_add_stories">Add Stories</string>
+    <string name="title_button_set_tracker_key">Set Tracker Key</string>
+
     <!-- Main Activity Strings -->
     <string name="title_activity_main_activity">Main Menu</string>
 

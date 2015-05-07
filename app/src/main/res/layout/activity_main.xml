@@ -44,7 +44,7 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="ADD STORIES"
+                android:text="@string/title_button_add_stories"
                 android:id="@+id/getStoriesButton"
                 android:layout_weight="1"
                 android:onClick="addStoriesButton"
@@ -59,7 +59,7 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="TRACKER KEY"
+                android:text="@string/title_button_set_tracker_key"
                 android:id="@+id/trackerKeyButton"
                 android:layout_weight="1"
                 android:onClick="trackerKeyButton"
@@ -83,7 +83,7 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="GET STORIES"
+                android:text="@string/title_button_get_stories"
                 android:id="@+id/addStoriesButton"
                 android:layout_weight="1"
                 android:onClick="getStoriesButton"
