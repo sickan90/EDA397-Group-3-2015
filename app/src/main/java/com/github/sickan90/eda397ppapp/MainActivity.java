@@ -99,14 +99,6 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void getStoriesButton(View view) {
-        SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
-        String trackerKey = settings.getString("trackerKey", "");
-        JSONObject jsonObject = new JSONObject();
-        try {
-            jsonObject.put("X-TrackerToken", trackerKey);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
         String url = "https://www.pivotaltracker.com/services/v5/projects/1310422";
 
         // Formulate the request and handle the response.
