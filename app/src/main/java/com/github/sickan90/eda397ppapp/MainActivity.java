@@ -21,9 +21,11 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -99,28 +101,17 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void getStoriesButton(View view) {
+        String url = "https://www.pivotaltracker.com/services/v5/projects/1310422/stories?date_format=millis&with_state=unstarted";
         SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
-        String trackerKey = settings.getString("trackerKey", "");
-        JSONObject jsonObject = new JSONObject();
-        try {
-            jsonObject.put("X-TrackerToken", trackerKey);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        String url = "https://www.pivotaltracker.com/services/v5/projects/1310422";
+        final String trackerKey = settings.getString("trackerKey", "");
 
         // Formulate the request and handle the response.
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null,
-                new Response.Listener<JSONObject>() {
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url,
+                new Response.Listener<JSONArray>() {
 
                     @Override
-                    public void onResponse(JSONObject response) {
+                    public void onResponse(JSONArray response) {
                         Log.i("Response", response.toString());
-                        try {
-                            Log.i("Response", response.getString("name"));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
                     }
                 }, new Response.ErrorListener() {
 
@@ -130,13 +121,28 @@ public class MainActivity extends ActionBarActivity {
                 Toast.makeText(getApplicationContext(),
                         error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        });
+        }) {
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json");
+                headers.put("X-Tracker-Project-Version", "62");
+                headers.put("X-Tracker-Pagination-Limit", "100");
+                headers.put("X-Tracker-Pagination-Offset", "0");
+                headers.put("X-Tracker-Pagination-Total", "4");
+                headers.put("X-Tracker-Pagination-Returned", "4");
+                headers.put("X-TrackerToken", trackerKey);
+                return headers;
+            }
+        };
 
         // Add the request to the RequestQueue.
-        RemoteRequester.getInstance().addRequest(jsonObjectRequest);
+        RemoteRequester.getInstance().addRequest(jsonArrayRequest);
     }
 
     public void addStoriesButton(View view) {
+
+        SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
+        final String trackerKey = settings.getString("trackerKey", "");
 
         String requestURL = "https://www.pivotaltracker.com/services/v5/projects/1310422/stories";
         Map<String, String> postParams = new HashMap<String, String>();
@@ -175,7 +181,7 @@ public class MainActivity extends ActionBarActivity {
                         HashMap<String, String> headers = new HashMap<String, String>();
                         headers.put("Content-Type", "application/json");
                         headers.put("X-Tracker-Project-Version", "63");
-                        headers.put("X-TrackerToken", "96f5f045c13ba69258837951f1910e73");
+                        headers.put("X-TrackerToken", trackerKey);
                         return headers;
                     }
                 };
