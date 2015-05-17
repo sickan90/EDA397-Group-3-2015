@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.sickan90.eda397ppapp" >
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -34,6 +36,18 @@
         <activity
             android:name=".PairProgrammingTipsDisplay"
             android:label="@string/title_activity_pair_programming_tips_display" >
+        </activity>
+        <activity
+            android:name=".ViewRoadmap"
+            android:label="@string/title_activity_view_roadmap" >
+        </activity>
+        <activity
+            android:name=".ViewRoadmapList"
+            android:label="@string/title_activity_view_roadmap_list" >
+        </activity>
+        <activity
+            android:name=".ViewIndividualStory"
+            android:label="@string/title_activity_view_individual_story" >
         </activity>
     </application>
 
