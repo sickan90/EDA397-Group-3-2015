@@ -13,4 +13,7 @@
     <!-- Pair Programming Dimension Settings -->
     <dimen name="activity_pair_programming_tip_text_size">24sp</dimen>
 
+    <!-- View Individual Story Dimension Settings -->
+    <dimen name="activity_view_individual_story_text_size">24sp</dimen>
+
 </resources>

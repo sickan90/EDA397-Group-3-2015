@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.github.sickan90.eda397ppapp.ViewIndividualStory">
+
+    <TextView android:text="@string/story_name_text" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/storyNameText"
+        android:textSize="@dimen/activity_view_individual_story_text_size"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/story_description_text"
+        android:id="@+id/storyDescriptionText"
+        android:layout_below="@+id/storyNameText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/activity_view_individual_story_text_size"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/story_estimate_text"
+        android:id="@+id/storyEstimateText"
+        android:textSize="@dimen/activity_view_individual_story_text_size"
+        android:layout_below="@+id/storyPriorityText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/story_status_text"
+        android:id="@+id/storyStatusText"
+        android:textSize="@dimen/activity_view_individual_story_text_size"
+        android:layout_below="@+id/storyEstimateText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/story_priority_text"
+        android:id="@+id/storyPriorityText"
+        android:layout_below="@+id/storyDescriptionText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/activity_view_individual_story_text_size"/>
+
+</RelativeLayout>

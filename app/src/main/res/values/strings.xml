@@ -35,7 +35,23 @@
 
     <string name="pair_programming_tips_text">This is a pair programming tip!</string>
 
+    <!-- View Roadmap Strings -->
+    <string name="title_activity_view_roadmap">View Roadmap</string>
 
+    <string name="view_roadmap_text">What kind of stories do you want to see?</string>
 
->>>>>>> master
+    <!-- View Roadmap List Strings -->
+    <string name="title_activity_view_roadmap_list">View Roadmap List</string>
+
+    <string name="view_roadmap_list_text">Select a story!</string>
+
+    <!-- View Individual Story String< -->
+    <string name="title_activity_view_individual_story">View Individual Story</string>
+
+    <string name="story_name_text">Name: </string>
+    <string name="story_description_text">Description: </string>
+    <string name="story_priority_text">Priority: </string>
+    <string name="story_estimate_text">Estimate: </string>
+    <string name="story_status_text">Status: </string>
+
 </resources>
