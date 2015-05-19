@@ -101,6 +101,11 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void getStoriesButton(View view) {
+        Intent intent = new Intent(this, ViewRoadmap.class);
+        startActivity(intent);
+    }
+
+    /*public void getStoriesButton(final View view) {
         String url = "https://www.pivotaltracker.com/services/v5/projects/1310422/stories?date_format=millis&with_state=unstarted";
         SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
         final String trackerKey = settings.getString("trackerKey", "");
@@ -111,7 +116,10 @@ public class MainActivity extends ActionBarActivity {
 
                     @Override
                     public void onResponse(JSONArray response) {
-                        Log.i("Response", response.toString());
+                        //Log.i("Response", response.toString());
+                        Intent intent = new Intent(view.getContext(), ViewRoadmap.class);
+                        intent.putExtra("RESPONSE", response.toString());
+                        startActivity(intent);
                     }
                 }, new Response.ErrorListener() {
 
@@ -137,7 +145,7 @@ public class MainActivity extends ActionBarActivity {
 
         // Add the request to the RequestQueue.
         RemoteRequester.getInstance().addRequest(jsonArrayRequest);
-    }
+    }*/
 
     public void addStoriesButton(View view) {
 
@@ -189,8 +197,12 @@ public class MainActivity extends ActionBarActivity {
         RemoteRequester.getInstance().addRequest(jsonObjectRequest);
     }
 
+    public void pairProgramingTipsButton(View view) {
+        Intent intent = new Intent(this, PairProgrammingTips.class);
+        startActivity(intent);
+    }
 
-        @Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long

@@ -29,6 +29,29 @@
     <string name="planning_poker_win_button">Assign Value</string>
     <string name="planning_poker_lose_button">Go Back</string>
 
+    <!-- Pair Programming Tips Strings -->
+    <string name="title_activity_pair_programming_tips">Pair Programming Tips</string>
+    <string name="title_activity_pair_programming_tips_display">Pair Programming Tips Display</string>
 
->>>>>>> master
+    <string name="pair_programming_tips_text">This is a pair programming tip!</string>
+
+    <!-- View Roadmap Strings -->
+    <string name="title_activity_view_roadmap">View Roadmap</string>
+
+    <string name="view_roadmap_text">What kind of stories do you want to see?</string>
+
+    <!-- View Roadmap List Strings -->
+    <string name="title_activity_view_roadmap_list">View Roadmap List</string>
+
+    <string name="view_roadmap_list_text">Select a story!</string>
+
+    <!-- View Individual Story String< -->
+    <string name="title_activity_view_individual_story">View Individual Story</string>
+
+    <string name="story_name_text">Name: </string>
+    <string name="story_description_text">Description: </string>
+    <string name="story_priority_text">Priority: </string>
+    <string name="story_estimate_text">Estimate: </string>
+    <string name="story_status_text">Status: </string>
+
 </resources>
