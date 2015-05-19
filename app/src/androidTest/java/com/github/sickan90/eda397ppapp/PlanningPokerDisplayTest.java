@@ -33,8 +33,9 @@ public class PlanningPokerDisplayTest extends ActivityInstrumentationTestCase2<P
         Button pressNumberButton = (Button) activity.findViewById(R.id.planningPokerButton1);
         String actual = pressNumberButton.getText().toString();
         assertEquals(button, actual);
-
     }
+
+
 
 
 }
