@@ -39,12 +39,8 @@ public class TimerActivity extends ActionBarActivity implements
     private TextView wantedTimeTextView, minTime, maxTime, countdownTime;
     private Button resetButton, startPauseButton;
     private SeekBar timeSeekBar;
-    private Switch onOffSwitch;
-
 
     private boolean isTimerOn = false;
-
-
 
 
     @Override
@@ -71,7 +67,6 @@ public class TimerActivity extends ActionBarActivity implements
         resetButton = (Button) findViewById(R.id.timerResetButton);
         startPauseButton = (Button) findViewById(R.id.timerStartStopButton);
         timeSeekBar = (SeekBar) findViewById(R.id.timerSeekBar);
-        onOffSwitch = (Switch) findViewById(R.id.timerOnOffSwitch);
 
         if(timer.isRunning()) {
             remainingTime = timer.getRemainingTime();
