@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">EDA397 PP app</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="preference_file_name">Preferences</string>
 
     <!-- Menu Item Names -->
     <string name="action_settings">Settings</string>
@@ -53,5 +55,12 @@
     <string name="story_priority_text">Priority: </string>
     <string name="story_estimate_text">Estimate: </string>
     <string name="story_status_text">Status: </string>
+
+    <!-- Timer Activity Strings -->
+    <string name="title_activity_timer">Pair Programming Timer</string>
+    <string name="timer_on_off_switch_text">Set timer on/off</string>
+    <string name="timer_reset_button_text">Reset</string>
+    <string name="timer_start_button_text">Start</string>
+    <string name="timer_pause_button_text">Pause</string>
 
 </resources>

@@ -202,6 +202,11 @@ public class MainActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
+    public void timerButton(View view) {
+        Intent intent = new Intent(this, TimerActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
