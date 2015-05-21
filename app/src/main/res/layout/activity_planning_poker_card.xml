@@ -4,7 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.github.sickan90.eda397ppapp.PlanningPokerDisplay">
+    tools:context="com.github.sickan90.eda397ppapp.PlanningPokerCard">
 
     <LinearLayout
         android:orientation="vertical"
@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="#"
-            android:id="@+id/planningPokerDisplayTextView"
+            android:id="@+id/planningPokerCardTextView"
             android:layout_weight="0.9"
             android:gravity="center"
             android:textSize="@dimen/activity_planning_poker_display_text_size" />
@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/planning_poker_lose_button"
-                android:id="@+id/planningPokerDisplayBackButton"
+                android:id="@+id/planningPokerCardBackButton"
                 android:layout_weight="0.5"
                 android:onClick="backButtonClick" />
 
@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/planning_poker_win_button"
-                android:id="@+id/planningPokerDisplayWinButton"
+                android:id="@+id/planningPokerCardWinButton"
                 android:layout_weight="0.5"
                 android:onClick="winButtonClick" />
 
