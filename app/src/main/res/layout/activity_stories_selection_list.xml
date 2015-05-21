@@ -4,16 +4,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.github.sickan90.eda397ppapp.ViewRoadmap">
+    tools:context="com.github.sickan90.eda397ppapp.StoriesSelectionList">
 
     <ListView android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:id="@+id/getStoriesList"
+        android:id="@+id/nameOfStoriesList"
         android:footerDividersEnabled="true" />
     <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/view_roadmap_text"
-        android:id="@+id/getStories" />
-
+        android:text="@string/view_roadmap_list_text"
+        android:id="@+id/nameOfStory" />
 
 </LinearLayout>
