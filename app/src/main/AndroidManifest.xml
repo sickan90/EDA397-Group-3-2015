@@ -24,7 +24,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".PlanningPokerDisplay"
+            android:name=".PlanningPokerCard"
             android:label="@string/title_activity_planning_poker_display"
             android:screenOrientation="portrait" >
         </activity>

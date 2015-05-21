@@ -8,17 +8,17 @@ import android.view.View;
 import android.widget.TextView;
 
 
-public class PlanningPokerDisplay extends ActionBarActivity {
+public class PlanningPokerCard extends ActionBarActivity {
 
     String number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_planning_poker_display);
+        setContentView(R.layout.activity_planning_poker_card);
 
         number = getIntent().getStringExtra("NUMBER");
-        ((TextView) findViewById(R.id.planningPokerDisplayTextView)).setText(number);
+        ((TextView) findViewById(R.id.planningPokerCardTextView)).setText(number);
 
     }
 

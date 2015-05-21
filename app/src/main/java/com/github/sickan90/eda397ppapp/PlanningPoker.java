@@ -3,12 +3,9 @@ package com.github.sickan90.eda397ppapp;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
 
@@ -63,7 +60,7 @@ public class PlanningPoker extends ActionBarActivity {
     }
 
     public void numberClick(View view){
-        Intent intent = new Intent(this, PlanningPokerDisplay.class);
+        Intent intent = new Intent(this, PlanningPokerCard.class);
         intent.putExtra("NUMBER", ((Button) view).getText());
         startActivity(intent);
     }
