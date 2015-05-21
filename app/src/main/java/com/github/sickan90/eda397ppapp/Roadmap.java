@@ -7,12 +7,12 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 
-public class ViewIndividualStory extends ActionBarActivity {
+public class Roadmap extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_individual_story);
+        setContentView(R.layout.activity_roadmap);
 
         String nameOfStory = getIntent().getStringExtra("NAME");
         String descriptionOfStory = getIntent().getStringExtra("DESCRIPTION");

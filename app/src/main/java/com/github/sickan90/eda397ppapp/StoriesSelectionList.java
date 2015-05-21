@@ -20,21 +20,19 @@ import com.android.volley.toolbox.JsonArrayRequest;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 
-public class ViewRoadmapList extends ActionBarActivity {
+public class StoriesSelectionList extends ActionBarActivity {
     ListView listView;
     private final static String PREFERENCES = "PREFERENCES";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_view_roadmap_list);
+            setContentView(R.layout.activity_stories_selection_list);
             RemoteRequester.getInstance().initialize(getCacheDir());
 
             JSONArray stories = null;
@@ -95,7 +93,7 @@ public class ViewRoadmapList extends ActionBarActivity {
                         System.out.println("prufa: " + tasks);
                         //getNameOfTask(tasks);
 
-                        Intent intent = new Intent(getApplicationContext(), ViewIndividualStory.class);
+                        Intent intent = new Intent(getApplicationContext(), Roadmap.class);
                         intent.putExtra("NAME", nameOfStory[index]);
                         intent.putExtra("DESCRIPTION", descriptionOfStory[index]);
                         intent.putExtra("PRIORITY", priorityOfStory[index]);

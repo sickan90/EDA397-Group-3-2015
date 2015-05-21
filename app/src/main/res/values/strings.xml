@@ -10,7 +10,7 @@
     <string name="tracker_key">Enter Pivotal Tracker key</string>
 
     <!-- Pivotal Tracker Connections -->
-    <string name="title_button_get_stories">View Roadmap</string>
+    <string name="title_button_get_stories">Roadmaps</string>
     <string name="title_button_add_stories">Add Stories</string>
     <string name="title_button_set_tracker_key">Set Tracker Key</string>
 
@@ -38,17 +38,17 @@
     <string name="pair_programming_tips_text">This is a pair programming tip!</string>
 
     <!-- View Roadmap Strings -->
-    <string name="title_activity_view_roadmap">View Roadmap</string>
+    <string name="title_activity_view_roadmap">Choose State of Story</string>
 
     <string name="view_roadmap_text">What kind of stories do you want to see?</string>
 
     <!-- View Roadmap List Strings -->
-    <string name="title_activity_view_roadmap_list">View Roadmap List</string>
+    <string name="title_activity_view_roadmap_list">Choose Story</string>
 
     <string name="view_roadmap_list_text">Select a story!</string>
 
     <!-- View Individual Story String< -->
-    <string name="title_activity_view_individual_story">View Individual Story</string>
+    <string name="title_activity_view_individual_story">View Roadmap</string>
 
     <string name="story_name_text">Name: </string>
     <string name="story_description_text">Description: </string>

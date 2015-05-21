@@ -24,14 +24,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class ViewRoadmap extends ActionBarActivity {
+public class StoriesSelection extends ActionBarActivity {
     ListView listView;
     private final static String PREFERENCES = "PREFERENCES";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_roadmap);
+        setContentView(R.layout.activity_stories_selection);
         RemoteRequester.getInstance().initialize(getCacheDir());
 
         listView = (ListView) findViewById(R.id.getStoriesList);
@@ -69,7 +69,7 @@ public class ViewRoadmap extends ActionBarActivity {
                                             Toast.LENGTH_SHORT).show();
                                 }
                                 else {
-                                    Intent intent = new Intent(arg1.getContext(), ViewRoadmapList.class);
+                                    Intent intent = new Intent(arg1.getContext(), StoriesSelectionList.class);
                                     intent.putExtra("RESPONSE", response.toString());
                                     startActivity(intent);
                                 }
